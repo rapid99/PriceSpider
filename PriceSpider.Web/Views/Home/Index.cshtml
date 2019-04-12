@@ -1,0 +1,16 @@
+﻿@model ProductModel
+
+<div class="container">
+    <form asp-action="Search" asp-controller="Home">
+        <div class="row">            
+            <div class="col">
+                <div class="mb-3">
+                    @Html.TextBoxFor(m => m.ManufactoringID, null, new { @class = "form-control", @placeholder = "Search by Manufactoring ID" })
+                    @*@Html.ValidationMessageFor(m => m.ManufactoringID, null, new { @style = "color:red;" })*@
+                    <input type="submit" class="btn btn-outline-secondary btn-rounded" id="searchBtn" value="Search" />
+                </div>
+                @Html.ValidationSummary()
+            </div>
+        </div>
+    </form>
+</div>
